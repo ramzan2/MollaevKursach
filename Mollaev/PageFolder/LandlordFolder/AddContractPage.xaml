@@ -1,0 +1,230 @@
+﻿<Page x:Class="Mollaev.PageFolder.LandlordFolder.AddContractPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Mollaev.PageFolder.LandlordFolder"
+      mc:Ignorable="d" 
+      d:DesignHeight="550" d:DesignWidth="1800"
+      Title="AddContractPage">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition Width="300"/>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="300"/>
+            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="300"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="70"/>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="1" Grid.Column="1"
+                    Orientation="Vertical" HorizontalAlignment="Right">
+            <TextBlock Text="Тип" Style="{DynamicResource normalText}"/>
+            <TextBlock Text="аренды" Style="{DynamicResource normalText}"/>
+        </StackPanel>
+        <TextBox x:Name="RentalTypeTB" Grid.Row="1" Grid.Column="2"
+                 Width="Auto"
+                 Style="{DynamicResource textBoxD}"/>
+
+        <StackPanel Grid.Row="2" Grid.Column="1"
+                    Orientation="Vertical" HorizontalAlignment="Right">
+            <TextBlock Text="Дата" Style="{DynamicResource normalText}"/>
+            <TextBlock Text="заключения" Style="{DynamicResource normalText}"/>
+        </StackPanel>
+        <DatePicker x:Name="DateOfConclusionTB" Grid.Row="2" Grid.Column="2"
+                 Width="280"/>
+
+        <StackPanel Grid.Row="3" Grid.Column="1"
+                    Orientation="Vertical" HorizontalAlignment="Right">
+            <TextBlock Text="Дата" Style="{DynamicResource normalText}"/>
+            <TextBlock Text="окончания" Style="{DynamicResource normalText}"/>
+        </StackPanel>
+        <DatePicker x:Name="EndDateTB" Grid.Row="3" Grid.Column="2"
+                 Width="280"/>
+
+        <StackPanel Grid.Row="4" Grid.Column="1"
+                    Orientation="Vertical" HorizontalAlignment="Right">
+            <TextBlock Text="Фамилия" Style="{DynamicResource normalText}"/>
+            <TextBlock Text="арендатора" Style="{DynamicResource normalText}"/>
+        </StackPanel>
+        <TextBox x:Name="LastNameLandlordTB" Grid.Row="4" Grid.Column="2"
+                 Width="Auto" 
+                 Style="{DynamicResource textBoxD}"/>
+
+        <StackPanel Grid.Row="5" Grid.Column="1"
+                    Orientation="Vertical" HorizontalAlignment="Right">
+            <TextBlock Text="Имя" Style="{DynamicResource normalText}"/>
+            <TextBlock Text="арендатора" Style="{DynamicResource normalText}"/>
+        </StackPanel>
+        <TextBox x:Name="FirstNameLandlordDP" Grid.Row="5" Grid.Column="2"
+                 Width="Auto"
+                 Style="{DynamicResource textBoxD}"/>
+
+        <StackPanel Grid.Row="6" Grid.Column="1"
+                    Orientation="Vertical" HorizontalAlignment="Right">
+            <TextBlock Text="Отчество" Style="{DynamicResource normalText}"/>
+            <TextBlock Text="арендатора" Style="{DynamicResource normalText}"/>
+        </StackPanel>
+        <TextBox x:Name="MiddleNameLandlord" Grid.Row="6" Grid.Column="2"
+                 Width="Auto"
+                 Style="{DynamicResource textBoxD}"/>
+
+        <StackPanel Grid.Row="7" Grid.Column="1"
+                    Orientation="Vertical" HorizontalAlignment="Right">
+            <TextBlock Text="Номер" Style="{DynamicResource normalText}"/>
+            <TextBlock Text="телефона" Style="{DynamicResource normalText}"/>
+        </StackPanel>
+        <TextBox x:Name="PhoneLandlordTB" Grid.Row="7" Grid.Column="2"
+                 Width="Auto" 
+                 Style="{DynamicResource textBoxD}"/>
+
+        <StackPanel Grid.Row="1" Grid.Column="3"
+                    Orientation="Vertical" HorizontalAlignment="Right">
+            <TextBlock Text="Эл." Style="{DynamicResource normalText}"/>
+            <TextBlock Text="почта" Style="{DynamicResource normalText}"/>
+        </StackPanel>
+        <TextBox x:Name="EmailLandlordTB"
+                  Grid.Column="4" Grid.Row="1"
+                  Width="Auto"
+                 Style="{DynamicResource textBoxD}"/>
+
+        <StackPanel Grid.Row="2" Grid.Column="3"
+                    Orientation="Vertical" HorizontalAlignment="Right">
+            <TextBlock Text="Серия" Style="{DynamicResource normalText}"/>
+            <TextBlock Text="пасспорта" Style="{DynamicResource normalText}"/>
+        </StackPanel>
+        <TextBox x:Name="SerPassTB"
+                  Grid.Column="4" Grid.Row="2"
+                   Width="Auto" 
+                 Style="{DynamicResource textBoxD}"/>
+
+        <StackPanel Grid.Row="3" Grid.Column="3"
+                    Orientation="Vertical" HorizontalAlignment="Right">
+            <TextBlock Text="Номер" Style="{DynamicResource normalText}"/>
+            <TextBlock Text="пасспорта" Style="{DynamicResource normalText}"/>
+        </StackPanel>
+        <TextBox x:Name="NumberPassTB"
+                  Grid.Column="4" Grid.Row="3"
+                   Width="Auto"
+                 Style="{DynamicResource textBoxD}"/>
+
+        <StackPanel Grid.Row="4" Grid.Column="3"
+                    Orientation="Vertical" HorizontalAlignment="Right">
+            <TextBlock Text="Дата" Style="{DynamicResource normalText}"/>
+            <TextBlock Text="платежа" Style="{DynamicResource normalText}"/>
+        </StackPanel>
+        <DatePicker x:Name="DateOfPaymentTB" Grid.Row="4" Grid.Column="4"
+                 Width="280"/>
+
+        <StackPanel Grid.Row="5" Grid.Column="3"
+                    Orientation="Vertical" HorizontalAlignment="Right">
+            <TextBlock Text="Сумма" Style="{DynamicResource normalText}"/>
+            <TextBlock Text="платежа" Style="{DynamicResource normalText}"/>
+        </StackPanel>
+        <TextBox x:Name="AmountPaymentTB" Grid.Row="5" Grid.Column="4"
+                 Width="Auto"
+                 Style="{DynamicResource textBoxD}"/>
+
+        <StackPanel Grid.Row="6" Grid.Column="3"
+                    Orientation="Vertical" HorizontalAlignment="Right">
+            <TextBlock Text="Название" Style="{DynamicResource normalText}"/>
+            <TextBlock Text="Компании" Style="{DynamicResource normalText}"/>
+        </StackPanel>
+        <TextBox x:Name="CompanyNameTB" Grid.Row="6" Grid.Column="4"
+                 Width="Auto"
+                 Style="{DynamicResource textBoxD}"/>
+        <StackPanel Grid.Row="7" Grid.Column="3"
+                    Orientation="Vertical" HorizontalAlignment="Right">
+            <TextBlock Text="Фамилия" Style="{DynamicResource normalText}"/>
+            <TextBlock Text="Арендодателя" Style="{DynamicResource normalText}"/>
+        </StackPanel>
+        <TextBox x:Name="LastNameTenantTB" Grid.Row="7" Grid.Column="4"
+                 Width="Auto"
+                 Style="{DynamicResource textBoxD}"/>
+
+        <StackPanel Grid.Row="1" Grid.Column="5"
+                    Orientation="Vertical" HorizontalAlignment="Right">
+            <TextBlock Text="Имя" Style="{DynamicResource normalText}"/>
+            <TextBlock Text="Арендодателя" Style="{DynamicResource normalText}"/>
+        </StackPanel>
+        <TextBox x:Name="FirstNameTenantTB" 
+                 Grid.Row="1" Grid.Column="6"
+                 Width="Auto"
+                 Style="{DynamicResource textBoxD}"/>
+
+
+        <StackPanel Grid.Row="2" Grid.Column="5"
+                    Orientation="Vertical" HorizontalAlignment="Right">
+            <TextBlock Text="Отчество" Style="{DynamicResource normalText}"/>
+            <TextBlock Text="Арендодателя" Style="{DynamicResource normalText}"/>
+        </StackPanel>
+        <TextBox x:Name="MiddleNameTenantTB" Grid.Row="2" Grid.Column="6"
+                 Width="Auto"
+                 Style="{DynamicResource textBoxD}"/>
+
+        <StackPanel Grid.Row="3" Grid.Column="5"
+                    Orientation="Vertical" HorizontalAlignment="Right">
+            <TextBlock Text="Номер" Style="{DynamicResource normalText}"/>
+            <TextBlock Text="телефона" Style="{DynamicResource normalText}"/>
+        </StackPanel>
+        <TextBox x:Name="PhoneTB" Grid.Row="3" Grid.Column="6"
+                 Width="Auto"
+                 Style="{DynamicResource textBoxD}"/>
+
+        <StackPanel Grid.Row="4" Grid.Column="5"
+                    Orientation="Vertical" HorizontalAlignment="Right">
+            <TextBlock Text="Эл." Style="{DynamicResource normalText}"/>
+            <TextBlock Text="почта" Style="{DynamicResource normalText}"/>
+        </StackPanel>
+        <TextBox x:Name="EmailTB" Grid.Row="4" Grid.Column="6"
+                 Width="Auto"
+                 Style="{DynamicResource textBoxD}"/>
+        <StackPanel Grid.Row="5" Grid.Column="5"
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Right">
+            <Button BorderBrush="{x:Null}" Click="Button_Click">
+                <Button.Background >
+                    <ImageBrush ImageSource="/ResourceFolder/ImageFolder/free-icon-question-2476199.png"/>
+                </Button.Background>
+            </Button>
+            <Label Content="Тарифы" Style="{DynamicResource LabelNormalStyle}"/>
+        </StackPanel>
+        <ComboBox x:Name="IdRatesСB" Grid.Row="5" Grid.Column="6"
+                  SelectedItem="{Binding Rates}"
+                  DisplayMemberPath="NameRates" 
+                  SelectedValuePath="IdRates"
+                 Width="280"/>
+
+        <StackPanel Grid.Row="6" Grid.Column="5"
+                    Orientation="Vertical" HorizontalAlignment="Right">
+            <TextBlock Text="Название" Style="{DynamicResource normalText}"/>
+            <TextBlock Text="помещения" Style="{DynamicResource normalText}"/>
+        </StackPanel>
+
+        <ComboBox x:Name="IdStorageRoomsCb"
+                  Grid.Row="6" Grid.Column="6"
+                  Width="280"
+                  SelectedItem="{Binding StorageRooms}"
+                  DisplayMemberPath="NameStorageRooms" 
+                  SelectedValuePath="IdStorageRooms"/>
+
+        <Button x:Name="AddBtn" Content="Заключить договор"
+                Grid.Column="3" Grid.Row="8"
+               Grid.ColumnSpan="2" Height="50"
+                Click="AddBtn_Click"/>
+    </Grid>
+</Page>

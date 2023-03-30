@@ -1,0 +1,96 @@
+﻿<Page x:Class="Mollaev.PageFolder.LandlordFolder.ListLandlordPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Mollaev.PageFolder.LandlordFolder"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="ListLandlordPage">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="150"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="10"/>
+            <RowDefinition />
+        </Grid.RowDefinitions>
+        <Label Content="Поиск"
+               Style="{DynamicResource LabelNormalStyle}"/>
+        <TextBox x:Name="SearchTB"
+                 Grid.Column="1" Margin="12" 
+                 VerticalContentAlignment="Center" FontWeight="Bold"
+                 Height="30" TextChanged="SearchTB_TextChanged"
+                 Style="{DynamicResource searchTextbox}"/>
+
+        <ListBox Grid.Row="2"
+                 Grid.ColumnSpan="2"
+                 x:Name="ListReaderLB"
+                 SelectionMode="Multiple"
+                 MouseDoubleClick="ListReaderLB_MouseDoubleClick">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="70"/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <Image Grid.RowSpan="4" Source="{Binding PhotoStorageRooms}"/>
+                        <TextBlock Grid.Column="1"
+                            Style="{DynamicResource StyleTextBlock}">
+                            <Run Text="Площадь" FontWeight="Bold"/>
+                            <Run Text="{Binding Area}"/>
+                        </TextBlock>
+                        <TextBlock Grid.Row="1" Grid.Column="1"
+                            Style="{DynamicResource StyleTextBlock}">
+                            <Run Text="Вместимость склада" FontWeight="Bold"/>
+                            <Run Text="{Binding StorageСapacity}"/>
+                        </TextBlock>
+                        <TextBlock Grid.Row="2" Grid.Column="1"
+                            Style="{DynamicResource StyleTextBlock}">
+                            <Run Text="Название склада" FontWeight="Bold"/>
+                            <Run Text="{Binding NameStorageRooms}"/>
+                        </TextBlock>
+                        <TextBlock Grid.Row="3" Grid.Column="1"
+                            Style="{DynamicResource StyleTextBlock}">
+                            <Run Text="Вид склада" FontWeight="Bold"/>
+                            <Run Text="{Binding ViewStorageRooms}"/>
+                        </TextBlock>
+                        <TextBlock Grid.Row="3" Grid.Column="3"
+                            Style="{DynamicResource StyleTextBlock}">
+                            <Run Text="Статус" FontWeight="Bold"/>
+                            <Run Text="{Binding Status.NameStatus}"/>
+                        </TextBlock>
+                        <TextBlock Grid.Row="0" Grid.Column="2"
+                                   Style="{DynamicResource StyleTextBlock}">
+                            <TextBlock.Text>
+                                <MultiBinding 
+                                    StringFormat="{} Улица: {0}, Дом: {1}, Квартира: {2}, Корпус: {3}, Город: {4}, Регион: {5}">
+                                    <Binding Path="Address.Street.NameStreet"/>
+                                    <Binding Path="Address.HouseAddress"/>
+                                    <Binding Path="Address.FlatAddress"/>
+                                    <Binding Path="Address.HousingAddress"/>
+                                    <Binding Path="Address.City.NameCity"/>
+                                    <Binding Path="Address.Region.NameRegion"/>
+                                </MultiBinding>
+                            </TextBlock.Text>
+                        </TextBlock>
+
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+
+        </ListBox>
+
+    </Grid>
+</Page>
