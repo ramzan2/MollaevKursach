@@ -93,6 +93,6 @@
                 Grid.Row="3" Margin="12"
                 Grid.Column="3"
                 Grid.ColumnSpan="2"
-                Click="AddBtn_Click"/>
+                Click="AddBtn_Click" Background="#FFC3975E"/>
     </Grid>
 </Page>

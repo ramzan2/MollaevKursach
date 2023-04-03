@@ -3,11 +3,119 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:local="clr-namespace:Mollaev.WindoiwFolder"
         mc:Ignorable="d"
-        Title="Окно регистрации" Height="450" Width="800"
-        WindowStartupLocation="CenterScreen">
+         WindowStartupLocation="CenterScreen" 
+        WindowStyle="None" AllowsTransparency="True" Background="Transparent"
+        Title="AuthorizationWindow" Height="500" Width="800" Icon="/ResourceFolder/ImageFolder/E5O2e9XAsDk.jpg">
     <Grid>
-        
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="500"/>
+        </Grid.ColumnDefinitions>
+
+        <Border CornerRadius="10 0 0 10" >
+
+            <Border.Background>
+                <ImageBrush ImageSource="/ResourceFolder/ImageFolder/istockphoto-1138429558-612x612.jpg">
+                </ImageBrush>
+                <!--<LinearGradientBrush StartPoint="0,0" EndPoint="1,1">
+                    <GradientStop Color="#3aa9ad" Offset="0"/>
+                    <GradientStop Color="#3aada1" Offset="1"/>
+                </LinearGradientBrush>-->
+            </Border.Background>
+
+            <Grid >
+                <Border Background="Black" Opacity="0.65">
+                    <Border.Effect >
+                        <BlurEffect Radius="200" KernelType="Gaussian"/>
+                    </Border.Effect>
+                </Border>
+                <StackPanel VerticalAlignment="Bottom" >
+                    <TextBlock Text="Регистрация" Style="{StaticResource titleText}" />
+                    <TextBlock Text="Создавайте аккаунт и пользуйтесь" Style="{DynamicResource   normalText}"
+                               Foreground="White" Margin="12"/>
+                    <Button 
+                        x:Name="Authorization"
+                        Content="У вас уже есть аккаунт?" Style="{StaticResource button}" Margin="-20 100" 
+                            Click="Authorization_Click" Width="185"/>
+                </StackPanel>
+
+            </Grid>
+
+        </Border>
+
+        <Border Background="White" Grid.Column="1" CornerRadius="0 10 10 0" MouseDown="Border_MouseDown">
+
+            <StackPanel VerticalAlignment="Center">
+                <TextBlock Text="Регистрация" Style="{StaticResource titleText}" Foreground="#FFC3975E"
+                           Margin="40"/>
+                <Border BorderThickness="1" BorderBrush="#FFC3975E" Margin="70 7" CornerRadius="5">
+                    <Grid Margin="7 9">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+
+                        <Image Source="/ResourceFolder/ImageFolder/free-icon-email-2549872.png" Height="20" />
+                      
+                            <TextBlock x:Name="textLogin" MouseDown="textLogin_MouseDown"
+                                       Text="Введите логин" Style="{StaticResource textHeigt}"
+                                       VerticalAlignment="Center"/>
+                            <TextBox x:Name="txtLogin" TextChanged="txtLogin_TextChanged" Style="{StaticResource textBox}"
+                                 Height="30"
+                                 VerticalContentAlignment="Center" Foreground="#FFC3975E"
+                                 />
+
+                    </Grid>
+                </Border>
+
+                <Border BorderThickness="1" BorderBrush="#FFC3975E" Margin="70 7" CornerRadius="5">
+                    <Grid Margin="7 9">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Image Source="/ResourceFolder/ImageFolder/free-icon-padlock-3758099.png" Height="20" />
+                        <TextBlock x:Name="textPassword" MouseDown="textPassword_MouseDown"
+                                       Text="Введиет пароль" Style="{StaticResource textHeigt}"
+                                   VerticalAlignment="Center"/>
+                        <PasswordBox x:Name="txtPassword" PasswordChanged="txtPassword_PasswordChanged" Style="{StaticResource textBox}"
+                                     Height="30" Foreground="#FFC3975E" BorderBrush="{x:Null}"
+                                 VerticalContentAlignment="Center"/>
+                    </Grid>
+                </Border>
+
+                <Border BorderThickness="1" BorderBrush="#FFC3975E" Margin="70 7" CornerRadius="5">
+                    <Grid Margin="7 9">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="auto"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Image Source="/ResourceFolder/ImageFolder/free-icon-padlock-3758099.png" Height="20" />
+                        <TextBlock x:Name="textDBPassword" MouseDown="textDBPassword_MouseDown"
+                                       Text="Введиет повторно пароль" Style="{StaticResource textHeigt}"
+                                   VerticalAlignment="Center"/>
+                        <PasswordBox x:Name="txtDBPassword" PasswordChanged="txtDBPassword_PasswordChanged" Style="{StaticResource textBox}"
+                                     Height="30" Foreground="#FFC3975E" BorderBrush="{x:Null}"
+                                 VerticalContentAlignment="Center"/>
+                    </Grid>
+                </Border>
+
+                <Button x:Name="Registration" Content="Зарегистрироваться" 
+                        Click="Registration_Click" Style="{StaticResource mainbutton}" Background="#FFC3975E"/>
+            </StackPanel>
+        </Border>
+        <materialDesign:PackIcon Kind="Close"
+                                         MouseLeftButtonDown="PackIcon_MouseLeftButtonDown"
+                                                 VerticalAlignment="Top"
+                                                 Width="30"
+                                                 Height="30"
+                                                 HorizontalAlignment="Right"
+                                                 Opacity="0.3"
+                                 Grid.Column="2"
+                                                 Margin="0 13 14 0"/>
     </Grid>
 </Window>

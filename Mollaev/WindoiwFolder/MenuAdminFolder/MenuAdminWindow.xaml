@@ -11,7 +11,7 @@
         MaxHeight="750" MaxWidth="1200"
         MinHeight="750" MinWidth="1200"
         WindowStartupLocation="CenterScreen" AllowsTransparency="True"
-        Background="Transparent" WindowStyle="None">
+        Background="Transparent" WindowStyle="None" Icon="/ResourceFolder/ImageFolder/E5O2e9XAsDk.jpg">
     <Window.Resources>
         <BooleanToVisibilityConverter x:Key="BoolToVis" />
     </Window.Resources>
@@ -32,7 +32,7 @@
                 <Button Style="{StaticResource topButton}" HorizontalAlignment="Left" Margin="20 28 0 35">
                 </Button>
 
-                <Border Grid.Row="1" Background="#623ED0" CornerRadius="0 50 0 30">
+                <Border Grid.Row="1" Background="#FFC3975E" CornerRadius="0 50 0 30">
                     <DockPanel>
                         <Border Width="80" Height="80" Padding="3" Background="White" CornerRadius="100" DockPanel.Dock="Top" HorizontalAlignment="Left" Margin="20 -30 0 0">
                             <Ellipse>
@@ -44,7 +44,7 @@
 
                         <TextBlock Text="Silvers Club" Foreground="White" FontSize="22" 
                                    FontWeight="SemiBold" DockPanel.Dock="Top" Margin="5 25 0 10" TextAlignment="Center"/>
-                        <TextBlock Text="Чертанова, Москва" Foreground="#D0BFFF" 
+                        <TextBlock Text="Чертанова, Москва" Foreground="White" 
                                    FontSize="14" FontWeight="SemiBold" DockPanel.Dock="Top" TextAlignment="Center"/>
 
                         <!--Menu Seprator-->
@@ -55,14 +55,14 @@
                             <Button x:Name="AddList" Style="{StaticResource menuButton}"
                                     Click="AddList_Click">
                                 <StackPanel Orientation="Horizontal">
-                                    <TextBlock Text="Список пользователей"/>
+                                    <TextBlock Text="Список пользователей" Foreground="White"/>
                                 </StackPanel>
                             </Button>
 
                             <Button Style="{StaticResource menuButton}"
                                     Click="Button_Click">
                                 <StackPanel Orientation="Horizontal">
-                                    <TextBlock Text="Добавить пользователя"/>
+                                    <TextBlock Text="Добавить пользователя" Foreground="White"/>
                                 </StackPanel>
                             </Button>
                         </StackPanel>
@@ -72,7 +72,7 @@
                                 Click="SmenUser_Click">
                             <StackPanel Orientation="Horizontal">
                                 <TextBlock Text="Сменить учетную запись"
-                                           FontWeight="Bold"/>
+                                           FontWeight="Bold" Foreground="White"/>
                             </StackPanel>
                         </Button>
                     </DockPanel>

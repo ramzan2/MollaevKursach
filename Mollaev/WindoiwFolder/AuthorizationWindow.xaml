@@ -6,9 +6,9 @@
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         mc:Ignorable="d"
         xmlns:local="clr-namespace:Mollaev.WindoiwFolder"
-        WindowStartupLocation="CenterScreen"
+        WindowStartupLocation="CenterScreen" 
         WindowStyle="None" AllowsTransparency="True" Background="Transparent"
-        Title="AuthorizationWindow" Height="500" Width="800">
+        Title="AuthorizationWindow" Height="500" Width="800" Icon="/ResourceFolder/ImageFolder/E5O2e9XAsDk.jpg">
     <Grid>
 
         <Grid.ColumnDefinitions>

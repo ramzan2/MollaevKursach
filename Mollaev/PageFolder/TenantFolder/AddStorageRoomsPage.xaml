@@ -67,12 +67,12 @@
             <TextBlock Text="склада" Style="{DynamicResource normalText}"/>
         </StackPanel>
 
-        <ComboBox x:Name="IdStatusCb"
+        <ComboBox x:Name="IdStatusCb" Margin="12"
                   Grid.Row="5" Grid.Column="2"
                   Style="{DynamicResource MaterialDesignComboBox}"
                   SelectedItem="{Binding Status}"
                   DisplayMemberPath="NameStatus" 
-                  SelectedValuePath="IdStatus"/>
+                  SelectedValuePath="IdStatus" />
         <StackPanel Grid.Row="5" Grid.Column="1"
                     Orientation="Vertical" HorizontalAlignment="Right" Margin="4"
                     VerticalAlignment="Center">
@@ -81,7 +81,7 @@
         </StackPanel>
 
 
-        <ComboBox x:Name="RegionCB"
+        <ComboBox x:Name="RegionCB" Margin="12"
                   Grid.Column="4" Grid.Row="1"
                   SelectedItem="{Binding Region}"
                   DisplayMemberPath="NameRegion" 
@@ -93,7 +93,7 @@
             <TextBlock Text="Регион" Style="{DynamicResource normalText}"/>
         </StackPanel>
 
-        <ComboBox x:Name="CityCB"
+        <ComboBox x:Name="CityCB" Margin="12"
                   Grid.Column="4" Grid.Row="2"
                   SelectedItem="{Binding City}"
                   DisplayMemberPath="NameCity" 
@@ -105,7 +105,7 @@
             <TextBlock Text="Город" Style="{DynamicResource normalText}"/>
         </StackPanel>
 
-        <ComboBox x:Name="StreetCB"
+        <ComboBox x:Name="StreetCB" Margin="12"
                   Grid.Column="4" Grid.Row="3"
                   SelectedItem="{Binding Street}"
                   DisplayMemberPath="NameStreet" 
@@ -150,12 +150,12 @@
 
         <Button x:Name="LoadIm" Content="Загрузить фото"
                 Grid.Column="5" Grid.Row="6" Margin="12"
-                Click="LoadIm_Click" Height="50"/>
+                Click="LoadIm_Click" Height="50" Background="#FFC3975E"/>
 
         <Button x:Name="AddBtn" Content="Добавить"
                 Grid.Column="2" Grid.Row="6"
                 Margin="12" Height="50"
-                Click="AddBtn_Click"/>
+                Click="AddBtn_Click" Background="#FFC3975E"/>
 
     </Grid>
 </Page>

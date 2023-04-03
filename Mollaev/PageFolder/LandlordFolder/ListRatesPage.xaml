@@ -34,18 +34,11 @@
         <Button x:Name="BackBtn"
                 Content="Назад" Grid.Column="3"
                 Grid.Row="1"
-                Click="BackBtn_Click"/>
+                Click="BackBtn_Click" Background="#FFC3975E"/>
         <DataGrid x:Name="DgRates" AutoGenerateColumns="False" 
                   IsReadOnly="True"
                   Grid.Column="1" Grid.Row="2" 
                   Grid.ColumnSpan="3" >
-            <DataGrid.ContextMenu>
-                <ContextMenu>
-                    <MenuItem x:Name="DeleteMI"
-                              Header="Удалить пользователя"/>
-                    <MenuItem x:Name="EditMI" Header="Редактирование пользователя"/>
-                </ContextMenu>
-            </DataGrid.ContextMenu>
             <DataGrid.Columns >
                 <DataGridTextColumn Header="Название тарифа"
                                     Binding="{Binding NameRates}"

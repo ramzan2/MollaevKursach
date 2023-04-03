@@ -27,14 +27,24 @@ namespace Mollaev.PageFolder.LandlordFolder
             DgContract.ItemsSource = DBEntities.GetContext().Contract
                 .ToList().OrderBy(u => u.IdContract);
             //DgContract.ItemsSource = DBEntities.GetContext().Landlord
-            //    .ToList().OrderBy(u => u.LastNameLandlord);
+            //   .ToList().OrderBy(u => u.IdLandlord);
+            //DgContract.ItemsSource = DBEntities.GetContext().Landlord
+             //  .ToList().OrderBy(u => u.LastNameLandlord);
             //DgContract.ItemsSource = DBEntities.GetContext().Tenant
             //    .ToList().OrderBy(u => u.IdTenant);
         }
 
         private void SearchTB_TextChanged(object sender, TextChangedEventArgs e)
         {
+            DgContract.ItemsSource = DBEntities.GetContext()
+             .Contract.Where(u => u.StorageRooms.NameStorageRooms
+             .StartsWith(SearchTB.Text))
+             .ToList().OrderBy(u => u.IdStorageRooms);
+        }
 
+        private void BackBtn_Click(object sender, RoutedEventArgs e)
+        {
+            NavigationService.Navigate(new PageFolder.LandlordFolder.ListLandlordPage());
         }
     }
 }

@@ -27,15 +27,13 @@
                Grid.Row="1" Grid.Column="1"/>
         <TextBox x:Name="SearchTB"
                  Grid.Row="1" Grid.Column="2" FontWeight="Bold"
-                 Height="30"
+                 Height="30" Grid.ColumnSpan="2"
                  Margin="12"
                  VerticalContentAlignment="Center"
                  HorizontalContentAlignment="Left"
                  Style="{DynamicResource searchTextbox}"
                  TextChanged="SearchTB_TextChanged"/>
-        <Button x:Name="BackBtn"
-                Content="Назад" Grid.Column="3"
-                Grid.Row="1"/>
+
         <DataGrid x:Name="DgContract" AutoGenerateColumns="False" 
                   IsReadOnly="True"
                   Grid.Column="1" Grid.Row="2" 
@@ -43,7 +41,7 @@
             <DataGrid.ContextMenu>
                 <ContextMenu>
                     <MenuItem x:Name="DeleteMI"
-                              Header="Удалить пользователя"
+                              Header="Удалить помещение"
                               Click="DeleteMI_Click"/>
                 </ContextMenu>
             </DataGrid.ContextMenu>
@@ -101,6 +99,9 @@
                 <DataGridTextColumn Header="Эл. почта"
                                     Binding="{Binding Tenant.Email}"
                                     Width="Auto"/>
+                <!--<DataGridTextColumn Header="Статус оплаты"
+                                    Binding="{Binding StatusPayment.NameStatusPayment}"
+                                    Width="Auto"/>-->
             </DataGrid.Columns>
         </DataGrid>
     </Grid>

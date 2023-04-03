@@ -27,11 +27,19 @@ namespace Mollaev.PageFolder.TenantFolder
             InitializeComponent();
             DgContract.ItemsSource = DBEntities.GetContext().Contract
                .ToList().OrderBy(u => u.IdContract);
+         
         }
 
         private void SearchTB_TextChanged(object sender, TextChangedEventArgs e)
         {
-
+            DgContract.ItemsSource = DBEntities.GetContext()
+                            .StorageRooms.Where(u => u.NameStorageRooms
+                            .StartsWith(SearchTB.Text))
+                            .ToList().OrderBy(u => u.NameStorageRooms);
+            if (DgContract.Items.Count <= 0)
+            {
+                MBClass.ErrorMB("Данные не найдены");
+            }
         }
 
         private void DeleteMI_Click(object sender, RoutedEventArgs e)
@@ -40,20 +48,20 @@ namespace Mollaev.PageFolder.TenantFolder
 
             if (DgContract.SelectedItem == null)
             {
-                MBClass.ErrorMB("Выберите пользователя" +
+                MBClass.ErrorMB("Выберите контракт" +
                     " для удаления");
             }
             else
             {
                 if (MBClass.QuestionMB("Удалить " +
-                    $"пользователя с логином " +
+                    $"контракт " +
                     $"{contract.RentalType}?"))
                 {
                     DBEntities.GetContext().Contract
                         .Remove(DgContract.SelectedItem as Contract);
                     DBEntities.GetContext().SaveChanges();
 
-                    MBClass.InfoMB("Пользователь удален");
+                    MBClass.InfoMB("Контракт удален");
                     DgContract.ItemsSource = DBEntities.GetContext()
                         .Contract.ToList().OrderBy(u => u.RentalType);
                 }

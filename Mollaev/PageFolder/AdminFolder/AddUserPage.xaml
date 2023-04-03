@@ -56,11 +56,11 @@
 
         <Button x:Name="LogOutBtn"
                     Content="Назад"
-                Margin="12"
+                Margin="12" Background="#FFC3975E"
                     Grid.Column="1"
                     Grid.Row="9" Click="LogOutBtn_Click"/>
 
-        <Button x:Name="AddUserBtn"
+        <Button x:Name="AddUserBtn" Background="#FFC3975E"
                     Content="Добавить пользователя"
                     Grid.Column="2" Grid.Row="9"
                 Click="AddUserBtn_Click"/>

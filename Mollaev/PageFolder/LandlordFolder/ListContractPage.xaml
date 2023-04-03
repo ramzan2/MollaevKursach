@@ -34,8 +34,8 @@
                  Style="{DynamicResource searchTextbox}"
                  TextChanged="SearchTB_TextChanged"/>
         <Button x:Name="BackBtn"
-                Content="Назад" Grid.Column="3"
-                Grid.Row="1"/>
+                Content="Назад" Grid.Column="3" Click="BackBtn_Click"
+                Grid.Row="1" Background="#FFC3975E"/>
         <DataGrid x:Name="DgContract" AutoGenerateColumns="False" 
                   IsReadOnly="True"
                   Grid.Column="1" Grid.Row="2" 

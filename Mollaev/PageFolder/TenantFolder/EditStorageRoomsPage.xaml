@@ -157,12 +157,12 @@
 
         <Button x:Name="EditIm" Content="Изменить фото"
                 Grid.Column="5" Grid.Row="6" Margin="12"
-                Click="EditIm_Click" Height="50"/>
+                Click="EditIm_Click" Height="50" Background="#FFC3975E"/>
 
         <Button x:Name="EditBtn" Content="Сохранить изменения"
                 Grid.Column="2" Grid.Row="6"
                 Margin="12" Height="50"
-                Click="EditBtn_Click"/>
+                Click="EditBtn_Click" Background="#FFC3975E"/>
 
     </Grid>
 </Page>
