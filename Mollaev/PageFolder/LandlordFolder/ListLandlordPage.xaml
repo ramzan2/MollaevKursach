@@ -38,14 +38,17 @@
                             <ColumnDefinition Width="70"/>
                             <ColumnDefinition/>
                             <ColumnDefinition/>
+                            <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
                         <Grid.RowDefinitions>
                             <RowDefinition/>
                             <RowDefinition/>
                             <RowDefinition/>
                             <RowDefinition/>
+                            <RowDefinition/>
                         </Grid.RowDefinitions>
-                        <Image Grid.RowSpan="4" Source="{Binding PhotoStorageRooms}"/>
+                        <Image Grid.RowSpan="4" Source="{Binding PhotoStorageRooms}" Grid.Column="3" 
+                               Margin="12" Height="160" Width="250"/>
                         <TextBlock Grid.Column="1"
                             Style="{DynamicResource StyleTextBlock}">
                             <Run Text="Площадь" FontWeight="Bold"/>
@@ -66,12 +69,12 @@
                             <Run Text="Вид склада" FontWeight="Bold"/>
                             <Run Text="{Binding ViewStorageRooms}"/>
                         </TextBlock>
-                        <TextBlock Grid.Row="3" Grid.Column="3"
-                            Style="{DynamicResource StyleTextBlock}">
+                        <TextBlock Grid.Row="2" Grid.Column="2" 
+                            Style="{DynamicResource StyleTextBlock}" VerticalAlignment="Top" HorizontalAlignment="Right">
                             <Run Text="Статус" FontWeight="Bold"/>
                             <Run Text="{Binding Status.NameStatus}"/>
                         </TextBlock>
-                        <TextBlock Grid.Row="0" Grid.Column="2"
+                        <TextBlock Grid.Row="5" Grid.Column="1" Grid.ColumnSpan="2"
                                    Style="{DynamicResource StyleTextBlock}">
                             <TextBlock.Text>
                                 <MultiBinding 

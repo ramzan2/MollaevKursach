@@ -44,6 +44,7 @@
                 </ContextMenu>
             </DataGrid.ContextMenu>
             <DataGrid.Columns>
+                
                 <DataGridTextColumn Header="Фамилия"
                                     Binding="{Binding LastNameLandlord}"
                                     Width="*"/>
@@ -65,9 +66,6 @@
                 <DataGridTextColumn Header="Номер пасспорта"
                                     Binding="{Binding NumberPass}"
                                     Width="*"/>
-                <!--<DataGridTextColumn Header="Статус оплаты"
-                                    Binding="{Binding StatusPayment.NameStatusPayment}"
-                                    Width="*"/>-->
             </DataGrid.Columns>
         </DataGrid>
     </Grid>

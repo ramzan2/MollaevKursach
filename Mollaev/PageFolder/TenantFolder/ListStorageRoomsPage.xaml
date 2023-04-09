@@ -55,13 +55,13 @@
                         </Grid.ColumnDefinitions>
                         <Grid.RowDefinitions>
                             <RowDefinition />
-                            <RowDefinition Height="40"/>
+                            <RowDefinition />
                             <RowDefinition/>
                             <RowDefinition/>
                             <RowDefinition/>
                         </Grid.RowDefinitions>
-                        <Image Grid.Row="1" Grid.RowSpan="2" Source="{Binding PhotoStorageRooms}" Grid.Column="4" 
-                               Height="200" Grid.ColumnSpan="3"/>
+                        <Image Grid.RowSpan="4" Source="{Binding PhotoStorageRooms}" Grid.Column="3" 
+                               Height="160" Width="250" />
                         <TextBlock Grid.Column="1" 
                             Style="{DynamicResource StyleTextBlock}">
                             <Run Text="Площадь:" FontWeight="Bold"/>
@@ -82,7 +82,7 @@
                             <Run Text="Вид склада:" FontWeight="Bold"/>
                             <Run Text="{Binding ViewStorageRooms}"/>
                         </TextBlock>
-                        <TextBlock Grid.Row="3" Grid.Column="4"
+                        <TextBlock Grid.Row="2" Grid.Column="2"
                             Style="{DynamicResource StyleTextBlock}">
                             <Run Text="Статус:" FontWeight="Bold"/>
                             <Run Text="{Binding Status.NameStatus}"/>

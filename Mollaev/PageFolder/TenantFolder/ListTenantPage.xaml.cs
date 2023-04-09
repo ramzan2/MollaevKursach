@@ -27,7 +27,8 @@ namespace Mollaev.PageFolder.TenantFolder
         {
             InitializeComponent();
             DgLandlord.ItemsSource = DBEntities.GetContext().Landlord
-                .ToList().OrderBy(u => u.LastNameLandlord);
+                .ToList().OrderBy(u => u.IdLandlord);
+  
         }
 
         private void DeleteMI_Click(object sender, RoutedEventArgs e)
@@ -79,10 +80,6 @@ namespace Mollaev.PageFolder.TenantFolder
                 .Landlord.Where(u => u.LastNameLandlord
                 .StartsWith(SearchTB.Text))
                 .ToList().OrderBy(u => u.LastNameLandlord);
-            if (DgLandlord.Items.Count <= 0)
-            {
-                MBClass.ErrorMB("Данные не найдены");
-            }
         }
     }
 }

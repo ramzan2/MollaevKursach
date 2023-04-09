@@ -55,7 +55,7 @@
                Grid.Column="1"
                Grid.Row="3"
                Style="{DynamicResource LabelNormalStyle}"/>
-        <TextBox x:Name="PhoneLandlordTb"
+        <TextBox x:Name="PhoneLandlordTb" 
                  Grid.Column="2" Grid.Row="3"
                  Style="{DynamicResource textBoxD}"
                  Text="{Binding PhoneLandlord}"/>
@@ -87,11 +87,11 @@
                  Style="{DynamicResource textBoxD}"
                  Text="{Binding NumberPass}"/>
 
-        <Button x:Name="AddBtn"
+        <Button x:Name="AddBtn" Height="50"
                 Content="Сохранить изменения"
                 Foreground="White"
                 Grid.Row="3" Margin="12"
-                Grid.Column="3"
+                Grid.Column="3" 
                 Grid.ColumnSpan="2"
                 Click="AddBtn_Click" Background="#FFC3975E"/>
     </Grid>

@@ -47,7 +47,8 @@ namespace Mollaev.PageFolder.LandlordFolder
                 EndDate = DateTime.Parse(EndDateTB.Text),
                 IdLandlord = landlord.IdLandlord,
                 IdTenant = tenant.IdTenant,
-                IdRates = Int32.Parse(IdRatesСB.SelectedValue.ToString())
+                IdRates = Int32.Parse(IdRatesСB.SelectedValue.ToString()),
+                
             };
             DBEntities.GetContext().Contract.Add(contractAdd);
             DBEntities.GetContext().SaveChanges();
@@ -92,8 +93,7 @@ namespace Mollaev.PageFolder.LandlordFolder
             var paymentAdd = new Payment()
             {
                 DateOfPayment = DateTime.Parse(DateOfPaymentTB.Text),
-                AmountPayment = Int32.Parse(AmountPaymentTB.Text),
-                IdContract = contract.IdContract
+                AmountPayment = Int32.Parse(AmountPaymentTB.Text)
             };
             DBEntities.GetContext().Payment.Add(paymentAdd);
             DBEntities.GetContext().SaveChanges();

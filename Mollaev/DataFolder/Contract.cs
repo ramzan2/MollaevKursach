@@ -14,12 +14,6 @@ namespace Mollaev.DataFolder
     
     public partial class Contract
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Contract()
-        {
-            this.Payment = new HashSet<Payment>();
-        }
-    
         public int IdContract { get; set; }
         public Nullable<int> IdStorageRooms { get; set; }
         public string RentalType { get; set; }
@@ -28,12 +22,12 @@ namespace Mollaev.DataFolder
         public int IdLandlord { get; set; }
         public int IdTenant { get; set; }
         public int IdRates { get; set; }
+        public Nullable<int> IdPayment { get; set; }
     
         public virtual Landlord Landlord { get; set; }
+        public virtual Payment Payment { get; set; }
         public virtual Rates Rates { get; set; }
         public virtual StorageRooms StorageRooms { get; set; }
         public virtual Tenant Tenant { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Payment> Payment { get; set; }
     }
 }

@@ -159,7 +159,7 @@
         <Setter Property="Template" >
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
-                    <Border Background="{TemplateBinding Background}" CornerRadius="7">
+                    <Border Background="{TemplateBinding Background}" CornerRadius="7" >
                         <ContentPresenter VerticalAlignment="Center" HorizontalAlignment="Left"/>
                     </Border>
                 </ControlTemplate>
@@ -168,8 +168,9 @@
 
         <Style.Triggers>
             <Trigger Property="IsMouseOver" Value="True">
-                <Setter Property="Background" Value="#7B5CD6" />
+                <!--<Setter Property="Background" Value="#ffffff" />-->
                 <Setter Property="Foreground" Value="#ffffff" />
+                <Setter Property="BorderBrush" Value="White"/>
             </Trigger>
         </Style.Triggers>
     </Style>

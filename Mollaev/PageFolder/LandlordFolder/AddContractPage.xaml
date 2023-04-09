@@ -224,7 +224,7 @@
 
         <Button x:Name="AddBtn" Content="Заключить договор"
                 Grid.Column="3" Grid.Row="8"
-               Grid.ColumnSpan="2" Height="50"
+               Grid.ColumnSpan="2" Height="50" Background="#FFC3975E"
                 Click="AddBtn_Click"/>
     </Grid>
 </Page>

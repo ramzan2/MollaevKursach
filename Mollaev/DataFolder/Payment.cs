@@ -14,13 +14,19 @@ namespace Mollaev.DataFolder
     
     public partial class Payment
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public Payment()
+        {
+            this.Contract = new HashSet<Contract>();
+        }
+    
         public int IdPayment { get; set; }
         public System.DateTime DateOfPayment { get; set; }
         public int AmountPayment { get; set; }
         public Nullable<int> IdStatusPayment { get; set; }
-        public int IdContract { get; set; }
     
-        public virtual Contract Contract { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<Contract> Contract { get; set; }
         public virtual StatusPayment StatusPayment { get; set; }
     }
 }
